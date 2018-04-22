@@ -1,3 +1,21 @@
 {
-  "extends": "react-app"
+  "extends": ["react-app", "plugin:prettier/recommended"],
+  "rules": {
+    "no-console":"warn",
+    "camelcase":"warn",
+    "complexity":"warn",
+    "constructor-super":"error",
+    "eol-last":"error",
+    "indent":"warn",
+    "jsx-quotes":"error",
+    "multiline-ternary":"error",
+    "vars-on-top":"error",
+    "valid-jsdoc":"error",
+    "Require-jsdoc":"error",
+    "no-useless-constructor":"error",
+    "no-duplicate-imports":"error",
+    "no-alert":"error",
+    "no-debugger":"error",
+    "no-empty-function":"error"
+  }
 }
