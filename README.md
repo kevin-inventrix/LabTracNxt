@@ -1,15 +1,15 @@
-# README File targeted towards developers
+# LabTrac Nxt
 
-## Clone this repo
+## How to clone this repo
 
 ```sh
 git clone https://github.com/shaggyshelar/LabTracNxt
 cd LabTracNxt
-yarn start
+npm install
+npm start
 ```
 
 Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Table of Contents
 
@@ -18,6 +18,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [npm start](#npm-start)
   - [npm test](#npm-test)
   - [npm run build](#npm-run-build)
+- [Fork and Pull Request Workflow](#fork-and-pull-request-workflow)
 - [Debugging in the Editor](#debugging-in-the-editor)
 - [Installing a Dependency](#installing-a-dependency)
 - [Importing a Component](#importing-a-component)
@@ -92,8 +93,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [`npm run build` fails on Heroku](#npm-run-build-fails-on-heroku)
   - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
   - [Moment.js locales are missing](#momentjs-locales-are-missing)
-- [Alternatives to Ejecting](#alternatives-to-ejecting)
-- [Something Missing?](#something-missing)
+- [VSCode Plugins](#vscode-plugins)
 
 ## Folder Structure
 
@@ -158,6 +158,12 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
+
+## Fork and Pull Request Workflow
+
+**We will be following the Fork and Pull request workflow as specified in the document:**
+
+https://github.com/susam/gitpr (https://github.com/susam/gitpr)
 
 ## Debugging in the Editor
 
@@ -2134,3 +2140,17 @@ To resolve this:
 3. If the dependency is small enough, copy it to your `src/` folder and treat it as application code.
 
 In the future, we might start automatically compiling incompatible third-party modules, but it is not currently supported. This approach would also slow down the production builds.
+
+## VSCode Plugins
+
+- `Prettier - Code formatter`
+- `ESLint`
+- `Debugger for Chrome`
+- `Jest`
+- `Auto Close Tag`
+- `Auto Rename Tag`
+- `GitLens -- Git supercharged`
+- `Import Cost`
+- `IntelliSense for CSS class name in HTML`
+- `npm intellisense`
+- `Path Intellisense`
