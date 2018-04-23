@@ -20,6 +20,8 @@ Below you will find some information on how to perform common tasks.<br>
   - [npm run build](#npm-run-build)
 - [Fork and Pull Request Workflow](#fork-and-pull-request-workflow)
 - [Debugging in the Editor](#debugging-in-the-editor)
+- [Displaying Lint Output in the Editor](#displaying-lint-output-in-the-editor)
+- [VSCode Plugins](#vscode-plugins)
 - [Installing a Dependency](#installing-a-dependency)
 - [Importing a Component](#importing-a-component)
 - [Code Splitting](#code-splitting)
@@ -93,7 +95,6 @@ Below you will find some information on how to perform common tasks.<br>
   - [`npm run build` fails on Heroku](#npm-run-build-fails-on-heroku)
   - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
   - [Moment.js locales are missing](#momentjs-locales-are-missing)
-- [VSCode Plugins](#vscode-plugins)
 
 ## Folder Structure
 
@@ -163,7 +164,18 @@ See the section about [deployment](#deployment) for more information.
 
 **We will be following the Fork and Pull request workflow as specified in the document:**
 
-https://github.com/susam/gitpr (https://github.com/susam/gitpr)
+https://github.com/susam/gitpr
+
+## Displaying Lint Output in the Editor
+
+>Note: this feature is available with `react-scripts@0.2.0` and higher.<br>
+>It also only works with npm 3 or higher.
+
+Some editors, including Sublime Text, Atom, and Visual Studio Code, provide plugins for ESLint.
+
+They are not required for linting. You should see the linter output right in your terminal as well as the browser console. However, if you prefer the lint results to appear right in your editor, you would need to install an ESLint plugin for your editor first. Once installed your editor should report the linting warnings.
+
+Conding styles will be also enforced by using [Prettier](https://github.com/jlongster/prettier). You need to install this plugin for it to work in your editor. So every time you save any file, all those configured rules will be applied on the respective file.
 
 ## Debugging in the Editor
 
@@ -172,6 +184,20 @@ https://github.com/susam/gitpr (https://github.com/susam/gitpr)
 Start your app by running `npm start`, and start debugging in VS Code by pressing `F5` or by clicking the green debug icon. You can now write code, set breakpoints, make changes to the code, and debug your newly modified code—all from your editor.
 
 Having problems with VS Code Debugging? Please see their [troubleshooting guide](https://github.com/Microsoft/vscode-chrome-debug/blob/master/README.md#troubleshooting).
+
+## VSCode Plugins
+
+- `Prettier - Code formatter`
+- `ESLint`
+- `Debugger for Chrome`
+- `Jest`
+- `Auto Close Tag`
+- `Auto Rename Tag`
+- `GitLens -- Git supercharged`
+- `Import Cost`
+- `IntelliSense for CSS class name in HTML`
+- `npm intellisense`
+- `Path Intellisense`
 
 ## Installing a Dependency
 
@@ -1594,29 +1620,7 @@ will affect your users' experience.
 JavaScript bundles using the source maps. This helps you understand where code
 bloat is coming from.
 
-To add Source map explorer to a Create React App project, follow these steps:
-
-```sh
-npm install --save source-map-explorer
-```
-
-Alternatively you may use `yarn`:
-
-```sh
-yarn add source-map-explorer
-```
-
-Then in `package.json`, add the following line to `scripts`:
-
-```diff
-   "scripts": {
-+    "analyze": "source-map-explorer build/static/js/main.*",
-     "start": "react-scripts start",
-     "build": "react-scripts build",
-     "test": "react-scripts test --env=jsdom",
-```
-
-Then to analyze the bundle run the production build then run the analyze
+To analyze the bundle run the production build then run the analyze
 script.
 
 ```
@@ -2140,17 +2144,3 @@ To resolve this:
 3. If the dependency is small enough, copy it to your `src/` folder and treat it as application code.
 
 In the future, we might start automatically compiling incompatible third-party modules, but it is not currently supported. This approach would also slow down the production builds.
-
-## VSCode Plugins
-
-- `Prettier - Code formatter`
-- `ESLint`
-- `Debugger for Chrome`
-- `Jest`
-- `Auto Close Tag`
-- `Auto Rename Tag`
-- `GitLens -- Git supercharged`
-- `Import Cost`
-- `IntelliSense for CSS class name in HTML`
-- `npm intellisense`
-- `Path Intellisense`
